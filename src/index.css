@@ -1,0 +1,37 @@
+:root {
+  --bg: #25b9eb;      /* slate-900 */
+  --card: #111827;    /* gray-900 */
+  --muted: #9ca3af;   /* gray-400 */
+  --text: #e5e7eb;    /* gray-200 */
+  --accent: #4f46e5;  /* indigo-600 */
+  --ok: #16a34a;      /* green-600 */
+  --bad: #dc2626;     /* red-600 */
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial; background: var(--bg); color: var(--text); }
+
+.app { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
+.app__header, .app__footer { padding: 12px 20px; background: #3cacb4; border-bottom: 1px solid #1f2937; }
+.app__footer { border-top: 1px solid #1f2937; border-bottom: 0; text-align: center; color: var(--muted); }
+.brand { color: var(--text); text-decoration: none; font-weight: 700; }
+.app__main { padding: 20px; display: grid; place-items: start center; }
+
+.card { width: min(900px, 92vw); background: var(--card); border: 1px solid #3680e7; border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+
+.row { display: grid; gap: 12px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+label { font-size: 14px; color: var(--muted); }
+input, select { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid #374151; background: #5077da; color: var(--text); }
+button { padding: 10px 14px; border-radius: 10px; border: 1px solid #374151; background: var(--accent); color: white; font-weight: 600; cursor: pointer; }
+button:disabled { opacity: .6; cursor: not-allowed; }
+
+.q-title { font-size: 20px; margin-bottom: 12px; }
+.answer { padding: 10px 12px; border: 1px solid #374151; border-radius: 10px; background: #0b1224; cursor: pointer; }
+.answer:hover { border-color: #4b5563; }
+.answer.correct { border-color: var(--ok); background: rgba(22,163,74,.08); }
+.answer.wrong { border-color: var(--bad); background: rgba(220,38,38,.08); }
+.meta { display: flex; gap: 12px; align-items: center; color: var(--muted); font-size: 14px; }
+.spread { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+hr { border: none; border-top: 1px solid #1f2937; margin: 16px 0; }
+small { color: var(--muted); }
